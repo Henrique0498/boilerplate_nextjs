@@ -9,7 +9,7 @@ const theme: DefaultTheme = {
   }
 }
 
-const testing = ''
+const test = ''
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
