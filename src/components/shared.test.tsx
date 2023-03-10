@@ -1,14 +1,8 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
-import { DefaultTheme, ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../styles/theme'
 import { Title } from './sharedstyles'
-
-const theme: DefaultTheme = {
-  colors: {
-    primary: '#111',
-    secondary: '#0070f3'
-  }
-}
 
 describe('Teste', () => {
   it('Render', () => {
