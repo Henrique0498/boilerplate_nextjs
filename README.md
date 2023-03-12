@@ -10,7 +10,7 @@
 
 ## Tecnologias usadas nesse projeto
 <div>
-    <a href="https://www.typescriptlang.org/pt/">
+  <a href="https://www.typescriptlang.org/pt/">
     <img height="40" width="52" src="https://github.com/Henrique0498/Henrique0498/blob/main/img/TypeScript.svg" title="Typescript" alt="Typescript"/>
   </a>
   <a href="https://pt-br.reactjs.org/">
@@ -33,6 +33,12 @@
   </a>
   <a href="https://typicode.github.io/husky/">
     <img height="40" width="52" src="https://github.com/Henrique0498/Henrique0498/blob/main/img/Husky.svg" title="Husky" alt="Husky"/>
+  </a>
+  <a href="https://eslint.org/">
+    <img height="40" width="52" src="https://github.com/Henrique0498/Henrique0498/blob/main/img/Eslint.svg" title="Eslint" alt="Eslint"/>
+  </a>
+  <a href="https://prettier.io/">
+    <img height="40" width="52" src="https://github.com/Henrique0498/Henrique0498/blob/main/img/Prettier.svg" title="Prettier" alt="Prettier"/>
   </a>
 </div>
 
