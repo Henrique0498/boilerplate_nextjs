@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/react'
 import React from 'react'
 
+import GlobalStyles from '../src/styles/global'
 import '../src/styles/globals.css'
 
 const preview: Preview = {
@@ -14,6 +15,13 @@ const preview: Preview = {
   }
 }
 
-export const decorators = [(Story) => <Story />]
+export const decorators = [
+  (Story) => (
+    <>
+      <GlobalStyles />
+      <Story />
+    </>
+  )
+]
 
 export default preview

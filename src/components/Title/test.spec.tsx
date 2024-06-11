@@ -4,10 +4,18 @@ import Title from '.'
 
 describe('<Title />', () => {
   it('should render the children', () => {
-    render(<Title>Testando...</Title>)
+    const { container } = render(<Title>Testando...</Title>)
 
     expect(
       screen.getByRole('heading', { name: /testando/i })
     ).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should render the font size correctly', () => {
+    const { container } = render(<Title>Testando...</Title>)
+
+    expect(container.firstChild).toHaveStyle({ 'font-size': '3rem' })
   })
 })
