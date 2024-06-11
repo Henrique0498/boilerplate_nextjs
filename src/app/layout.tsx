@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
+import { PropsWithChildren } from 'react'
 
 import '@styles/globals.css'
 
@@ -10,11 +11,7 @@ export const metadata: Metadata = {
   description: 'Um layout de next'
 }
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="pt-br">
       <body className={roboto.className}>{children}</body>
