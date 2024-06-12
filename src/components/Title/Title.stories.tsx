@@ -10,6 +10,6 @@ export default {
 export const Default: StoryObj = {
   args: {
     children: 'Title',
-    className: 'text-3xl text-blue-600'
+    className: 'text-3xl text-blue-600 dark:text-red-600'
   }
 }

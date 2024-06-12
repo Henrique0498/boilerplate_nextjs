@@ -2,7 +2,7 @@ import type { Preview } from '@storybook/react'
 import React from 'react'
 
 import GlobalStyles from '../src/styles/global'
-import '../src/styles/globals.css'
+import '../src/styles/global.css'
 
 const preview: Preview = {
   parameters: {
