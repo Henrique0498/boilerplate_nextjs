@@ -14,18 +14,8 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Generate package-lock.json if not exists
-        run: |
-          npm install --package-lock-only
-
-          # Check if package-lock.json was generated
-          if [ ! -f "package-lock.json" ]; then
-            echo "Error: package-lock.json not generated"
-            exit 1
-          fi
-
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Linting
         run: npm run lint
