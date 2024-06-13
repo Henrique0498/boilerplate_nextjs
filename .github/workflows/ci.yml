@@ -14,14 +14,11 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Check if package-lock.json exists
-        run: |
-          if [ ! -f "package-lock.json" ]; then
-            npm install --package-lock-only
-          fi
+      - name: Generate package-lock.json
+        run: npm install --package-lock-only
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Linting
         run: npm run lint
