@@ -3,6 +3,17 @@ module.exports = (plop) => {
     description: 'Create a component',
     prompts: [
       {
+        type: 'list',
+        name: 'atomic',
+        choices: [
+          { name: 'Atoms', value: 'atoms' },
+          { name: 'Molecules', value: 'molecules' },
+          { name: 'Organisms', value: 'organisms' },
+          { name: 'Templates', value: 'templates' },
+        ],
+        message: 'Que tipo de componente ele é?',
+      },
+      {
         type: 'input',
         name: 'name',
         message: 'Qual o nome do componente?'
@@ -11,22 +22,27 @@ module.exports = (plop) => {
     actions: [
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/index.tsx',
+        path: '../src/components/{{atomic}}/{{pascalCase name}}/index.tsx',
         templateFile: 'templates/Component.tsx.hbs'
       },
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/styles.ts',
+        path: '../src/components/{{atomic}}/{{pascalCase name}}/styles.ts',
         templateFile: 'templates/styles.ts.hbs'
       },
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/stories.tsx',
+        path: '../src/components/{{atomic}}/{{pascalCase name}}/styles.module.scss',
+        templateFile: 'templates/styles.scss.hbs'
+      },
+      {
+        type: 'add',
+        path: '../src/components/{{atomic}}/{{pascalCase name}}/stories.tsx',
         templateFile: 'templates/stories.tsx.hbs'
       },
       {
         type: 'add',
-        path: '../src/components/{{pascalCase name}}/test.spec.tsx',
+        path: '../src/components/{{atomic}}/{{pascalCase name}}/test.spec.tsx',
         templateFile: 'templates/test.tsx.hbs'
       }
     ]

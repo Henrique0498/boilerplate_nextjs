@@ -1,8 +1,13 @@
 import * as S from './styles'
 
-export default function {{pascalCase name}} () {
+import styles from './styles.module.scss'
+
+interface In{{pascalCase name}} {
+}
+
+export default function {{pascalCase name}} (props: In{{pascalCase name}}) {
   return (
-    <S.Wrapper>
+    <S.Wrapper className={styles.container} {...props}>
       <h1>{{pascalCase name}}</h1>
     </S.Wrapper>
   )

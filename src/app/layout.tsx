@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react'
 
 import { Providers } from './providers'
 
-import '@styles/global.scss'
+import '@/styles/global.scss'
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500' })
 
