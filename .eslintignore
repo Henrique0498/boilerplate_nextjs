@@ -1,3 +1,4 @@
 !.storybook
 !.jest
 generators
+next.config.js

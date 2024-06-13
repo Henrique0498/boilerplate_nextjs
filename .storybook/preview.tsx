@@ -2,7 +2,7 @@ import type { Preview } from '@storybook/react'
 import React from 'react'
 
 import GlobalStyles from '../src/styles/global'
-import '../src/styles/global.css'
+import '../src/styles/global.scss'
 
 const preview: Preview = {
   parameters: {
@@ -12,7 +12,9 @@ const preview: Preview = {
         date: /Date$/i
       }
     }
-  }
+  },
+
+  tags: ['autodocs']
 }
 
 export const decorators = [
