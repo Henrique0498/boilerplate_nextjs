@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import { PropsWithChildren } from 'react'
 
-import StyledComponentsRegistry from '@lib/registry'
 import { Providers } from './providers'
 
 import '@styles/global.css'
@@ -17,10 +16,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="pt-br">
-      <body className={roboto.className}>
-        <StyledComponentsRegistry>
-          <Providers>{children}</Providers>
-        </StyledComponentsRegistry>
+      <body
+        className={`${roboto.className} bg-gradient-to-tr from-violet-500 to-fuchsia-400`}
+      >
+        <Providers>
+          <div className="App">{children}</div>
+        </Providers>
       </body>
     </html>
   )
